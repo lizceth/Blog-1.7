@@ -1,0 +1,28 @@
+{% extends "index2.html" %}
+{% block contenido %}
+<form id='formulario' method="post" enctype='multipart/form-data'>{% csrf_token %}
+
+    <label>Autor1 </label>
+    {{formulario.autor}}
+    
+    <label>Autor </label>
+    {{user.get_username}}
+
+    <label>Titulo:</label>
+    {{formulario.titulo}}
+
+    <label>Contenido:</label>
+    {{formulario.contenido}}
+
+    <label>Categoria:</label>
+    {{formulario.categoria}}
+    
+    <label>Imagen:</label>
+    {{formulario.imagen}}
+
+
+    <p><input type="submit" name="" class="btn
+    btn-warnig" value="Guardar"/></p
+</form>
+{% endblock %}
+
