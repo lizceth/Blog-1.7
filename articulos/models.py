@@ -22,13 +22,9 @@ class Articulo(models.Model):
     def __unicode__(self):
         return self.titulo
 
-    class Meta:
-        ordering=['fecha_pub']
 
 class Comentario(models.Model):
     articulo=models.ForeignKey(Articulo)
     texto=models.TextField()
     fecha=models.DateField(auto_now_add=True)
 
-    class Meta:
-        ordering=['fecha']

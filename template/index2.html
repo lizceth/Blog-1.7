@@ -6,10 +6,25 @@
 	<title>Blog FIA</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="stylesheet" href="{{STATIC_URL}}css/foundation.css" />
-  <script src="{{STATIC_URL}}js/vendor/modernizr.js"></script>
+   <link href="{{STATIC_URL}}css/estilo.css" rel="stylesheet">
+   <script src="{{STATIC_URL}}js/vendor/modernizr.js"></script>
 </head>
 <body>
-    
+
+ <header>
+        <figure class="insignia">
+            <img src="{{STATIC_URL}}img/logo.png" alt="">
+        </figure>
+        <p >Escuela Academica Profesional</p>
+        <h2>Ingeniería de Sistemas</h2>
+        <ul data-orbit >
+            <li><img class="fotosdes" src="{{STATIC_URL}}img/foto1.png" ></li>
+            <li><img class="fotosdes" src="{{STATIC_URL}}img/foto3.png" ></li>
+            
+			</ul>
+        
+    </header>    
+
 <nav class="top-bar">
     <ul class="title-area">
         <li class="name">
@@ -36,9 +51,9 @@
 {% block contenido %}
    
  
-  <div class="row">
+<div class="row">
  
-    <div class="large-10 columns" role="content">
+   <div class="large-10 columns" role="content">
               <div class="row">
           {% for articulo in articulos %}
         <div class="large-2 columns">

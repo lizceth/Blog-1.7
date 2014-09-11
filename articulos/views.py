@@ -60,6 +60,7 @@ def borrar_articulo(request, id):
 
 
 def comentar(request,pk):
+    articulo = get_object_or_404(Articulo, pk=pk)
     if request.method == 'POST':
         formulario = ComentarioForm(request.POST)
         if formulario.is_valid():
@@ -68,5 +69,5 @@ def comentar(request,pk):
     else:
         formulario = ComentarioForm()
     return render_to_response('articulos/comentarioform.html',
-                              {'formulario':formulario},
+                              {'formulario':formulario, 'articulo':articulo},
                           context_instance=RequestContext(request))

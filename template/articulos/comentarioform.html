@@ -1,8 +1,9 @@
 <form action='' method="POST">{% csrf_token %}
+            {{articulo.titulo}}
     <ul>
         <li>
             <label>Articulo:</label>
-            {{formulario.articulo}}
+            {{formulario.articulo.}} 
         </li> 
         <li>
             <label>texto:</label>
